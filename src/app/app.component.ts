@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Usuario } from './models/usuario';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'forms';
+  user: Usuario = {
+    aceitaTermosDeCondicao: true,
+    email:'',
+    genero:'',
+    nome:'',
+    senha:'',
+    username:''
+  }
+
+  salvarUsuario(){
+    alert('Salvo com Sucesso!')
+    console.log(this.user)
+  }
+
 }
